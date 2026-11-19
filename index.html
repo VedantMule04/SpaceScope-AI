@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceScope AI | Explore the Universe</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <div>
+                <h2>SpaceScope<span> AI</span></h2>
+                <small>EXPLORE THE UNIVERSE</small>
+            </div>
+        </div>
+
+        <button class="new-chat" onclick="newChat()">
+            <span>＋</span> New conversation
+        </button>
+
+        <div class="sidebar-label">YOUR EXPLORATION</div>
+        <div id="history" class="history">
+            <p class="empty-history">Your conversations will appear here.</p>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="status-dot"></div>
+            <div>
+                <strong>AI system ready</strong>
+                <small>Powered by local AI</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div class="mobile-brand">✦ SpaceScope AI</div>
+            <div class="topbar-label">SPACE SCIENCE ASSISTANT</div>
+            <div class="online-status">
+                <span></span> SYSTEM ONLINE
+            </div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome" id="welcome">
+
+                <div class="orbit">
+                    <div class="orbit-ring"></div>
+                    <div class="planet">✦</div>
+                </div>
+
+                <div class="eyebrow">YOUR PERSONAL COSMIC GUIDE</div>
+
+                <h1>Explore beyond<br>
+                    <span>the ordinary.</span>
+                </h1>
+
+                <p class="welcome-description">
+                    Discover the wonders of space with AI.
+                    Ask questions, explore planets and uncover
+                    the mysteries of our universe.
+                </p>
+
+                <div class="suggestion-heading">
+                    <span>✧</span> START YOUR EXPLORATION
+                </div>
+
+                <div class="suggestions">
+                    <button onclick="askSuggestion('Which planet is called the Red Planet?')">
+                        <span>🔴</span>
+                        <div>
+                            <strong>Explore Mars</strong>
+                            <small>Why is Mars called the Red Planet?</small>
+                        </div>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+
+                    <button onclick="askSuggestion('Tell me about Jupiter.')">
+                        <span>🪐</span>
+                        <div>
+                            <strong>Discover Jupiter</strong>
+                            <small>Explore our largest planet</small>
+                        </div>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+
+                    <button onclick="askSuggestion('How does the Sun produce energy?')">
+                        <span>☀️</span>
+                        <div>
+                            <strong>Understand the Sun</strong>
+                            <small>Discover the star at our centre</small>
+                        </div>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+
+                    <button onclick="askSuggestion('Tell me about the Solar System.')">
+                        <span>🌌</span>
+                        <div>
+                            <strong>Our Solar System</strong>
+                            <small>Explore our cosmic neighbourhood</small>
+                        </div>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+        </section>
+
+        <footer class="composer-area">
+            <form id="chatForm" class="composer">
+                <textarea
+                    id="questionInput"
+                    placeholder="Ask anything about space..."
+                    rows="1"
+                    required
+                ></textarea>
+
+                <button type="submit" id="sendButton" aria-label="Send message">
+                    ↑
+                </button>
+            </form>
+
+            <p class="disclaimer">
+                SpaceScope AI can make mistakes. Verify important scientific information.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
